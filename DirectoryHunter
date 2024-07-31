@@ -1,0 +1,14 @@
+Hunter = {
+    ["Directory"] = ("Workspace"), -- can literally be anything, a player even.
+    ReturnInConsole = {
+        ["Parent"] = (false),
+        ["Children"] = (false)
+    }
+}
+
+loadstring(game:HttpGet("https://pastebin.com/raw/N3g8dNgU"))()
+
+--[[
+Open Source:
+Ignore the messy code.
+]]
