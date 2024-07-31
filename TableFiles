@@ -23,11 +23,11 @@ Etc.
 local TableBot = {}
 
 function TableBot.Writefile(filename,content)
-writefile(filename..".Json", game:GetService("HttpService"):JSONEncode(content))
+writefile(filename..".bankai", game:GetService("HttpService"):JSONEncode(content))
 end
 
-function TableBot.Readfile(filename)
-game:GetService("HttpService"):JSONDecode(readfile(filename..".Json"))
+function TableBot.Readfile(filenamelol)
+return game:GetService("HttpService"):JSONDecode(readfile(filenamelol..".bankai"))
 end
 
 return TableBot
