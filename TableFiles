@@ -1,0 +1,11 @@
+local TableBot = {}
+
+function TableBot.Writefile(filename,content)
+writefile(filename..".Json", game:GetService("HttpService"):JSONEncode(content))
+end
+
+function TableBot.Readfile(filename)
+game:GetService("HttpService"):JSONDecode(readfile(filename))
+end
+
+return TableBot
