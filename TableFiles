@@ -1,3 +1,25 @@
+--[[
+How To Use:
+(Copy And Paste The Following)
+
+local FileBot = loadstring(game:HttpGet("https://raw.githubusercontent.com/draftedtokyoto/Random_Scripts/main/TableFiles"))()
+
+--To save a table Use this format:
+FileBot.Writefile(YourFileName,ContentOrTable)
+
+--To read a table Use this format:
+FileBot.Readfile(YourFilename)
+
+Note: Readfile can be used in many ways such as:
+local file = FileBot.Readfile(YourFilename)
+
+print(file)
+
+Etc.
+
+]]
+
+
 local TableBot = {}
 
 function TableBot.Writefile(filename,content)
@@ -5,7 +27,7 @@ writefile(filename..".Json", game:GetService("HttpService"):JSONEncode(content))
 end
 
 function TableBot.Readfile(filename)
-game:GetService("HttpService"):JSONDecode(readfile(filename))
+game:GetService("HttpService"):JSONDecode(readfile(filename..".Json"))
 end
 
 return TableBot
